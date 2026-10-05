@@ -7,10 +7,12 @@ that PR branch. Upstream build documentation lives in [README.md](README.md).
 
 The adopted owner base is `e6dfec2857b1e008a416832e1bd9df868513b035` from the owner's
 `zotflow` branch. Our annotation feature commit is
-`6fb7358b57d3f73444ae39fdc25017e9e9027394`. The parent's reminder workflow monitors
-owner `master`, which can diverge from the `zotflow` integration branch. Inspect
-both the owner changes and the reader pin from a ZotFlow release before merging;
-an alert does not mean a commit has been adopted.
+`6fb7358b57d3f73444ae39fdc25017e9e9027394`. The parent's reminder workflow checks
+published stable ZotFlow releases and includes each release's pinned reader commit.
+It does not alert for independent reader commits. Owner `master` can diverge from
+the `zotflow` integration branch; inspect the pinned changes before merging.
+Independent reader updates can be reviewed manually. An alert does not mean a
+commit has been adopted.
 
 ## Agent and maintenance rules
 
